@@ -253,9 +253,9 @@ document.addEventListener('DOMContentLoaded', () => {
       ctx.fillStyle = 'rgba(2, 4, 10, 0.28)';
       ctx.fillRect(0, 0, width, height);
 
-      // Smooth mouse/touch coordinates interpolation (Accelerated 3x to feel highly responsive & snappy)
-      mouse.x += (mouse.targetX - mouse.x) * 0.24;
-      mouse.y += (mouse.targetY - mouse.y) * 0.24;
+      // Smooth mouse/touch coordinates interpolation (Accelerated to feel highly responsive & snappy)
+      mouse.x += (mouse.targetX - mouse.x) * 0.55;
+      mouse.y += (mouse.targetY - mouse.y) * 0.55;
 
       // Draw background ambient connection threads (Only on Desktop to save mobile CPU)
       if (!isMobile) {
@@ -533,6 +533,29 @@ document.addEventListener('DOMContentLoaded', () => {
       rightCol.addEventListener('mouseleave', () => {
         rightColumnMouse.active = false;
       });
+
+      // Mobile Touch Screen Support for Hero 3D Attractor
+      rightCol.addEventListener('touchstart', (e) => {
+        if (e.touches.length > 0) {
+          const rect = rightCol.getBoundingClientRect();
+          rightColumnMouse.targetX = e.touches[0].clientX - rect.left - rect.width / 2;
+          rightColumnMouse.targetY = e.touches[0].clientY - rect.top - rect.height / 2;
+          rightColumnMouse.active = true;
+        }
+      }, { passive: true });
+
+      rightCol.addEventListener('touchmove', (e) => {
+        if (e.touches.length > 0) {
+          const rect = rightCol.getBoundingClientRect();
+          rightColumnMouse.targetX = e.touches[0].clientX - rect.left - rect.width / 2;
+          rightColumnMouse.targetY = e.touches[0].clientY - rect.top - rect.height / 2;
+          rightColumnMouse.active = true;
+        }
+      }, { passive: true });
+
+      rightCol.addEventListener('touchend', () => {
+        rightColumnMouse.active = false;
+      });
     }
 
     let rotX = 0.003;
@@ -557,17 +580,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
       ctx.clearRect(0, 0, width, height);
 
-      // Smooth pointer mouse target tracking
-      rightColumnMouse.x += (rightColumnMouse.targetX - rightColumnMouse.x) * 0.08;
-      rightColumnMouse.y += (rightColumnMouse.targetY - rightColumnMouse.y) * 0.08;
+      // Smooth pointer mouse target tracking (Accelerated 5x from 0.08 to 0.40 for instantaneous visual feedback)
+      rightColumnMouse.x += (rightColumnMouse.targetX - rightColumnMouse.x) * 0.40;
+      rightColumnMouse.y += (rightColumnMouse.targetY - rightColumnMouse.y) * 0.40;
 
-      // Adjust rotation speed depending on pointer attraction
+      // Adjust rotation speed depending on pointer attraction (Snappier response)
       if (rightColumnMouse.active) {
-        rotX += (0.01 - rotX) * 0.05;
-        rotY += (0.015 - rotY) * 0.05;
+        rotX += (0.01 - rotX) * 0.15;
+        rotY += (0.015 - rotY) * 0.15;
       } else {
-        rotX += (baseSpeedX - rotX) * 0.05;
-        rotY += (baseSpeedY - rotY) * 0.05;
+        rotX += (baseSpeedX - rotX) * 0.10;
+        rotY += (baseSpeedY - rotY) * 0.10;
       }
 
       angleX += rotX;
@@ -1286,6 +1309,35 @@ document.addEventListener('DOMContentLoaded', () => {
       attractor.active = false;
     });
 
+    // Mobile Touch Screen Support for Services Neural Net Attractor
+    servicesCanvas.addEventListener('touchstart', (e) => {
+      if (e.touches.length > 0) {
+        const rect = servicesCanvas.getBoundingClientRect();
+        const mx = e.touches[0].clientX - rect.left - width / 2;
+        const my = e.touches[0].clientY - rect.top - height / 2;
+        
+        attractor.targetX = mx;
+        attractor.targetY = my;
+        attractor.active = true;
+      }
+    }, { passive: true });
+
+    servicesCanvas.addEventListener('touchmove', (e) => {
+      if (e.touches.length > 0) {
+        const rect = servicesCanvas.getBoundingClientRect();
+        const mx = e.touches[0].clientX - rect.left - width / 2;
+        const my = e.touches[0].clientY - rect.top - height / 2;
+        
+        attractor.targetX = mx;
+        attractor.targetY = my;
+        attractor.active = true;
+      }
+    }, { passive: true });
+
+    servicesCanvas.addEventListener('touchend', () => {
+      attractor.active = false;
+    });
+
     let angleX = 0.003;
     let angleY = 0.004;
 
@@ -1301,12 +1353,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Smoothly interpolate attractor
       if (attractor.active) {
-        attractor.x += (attractor.targetX - attractor.x) * 0.1;
-        attractor.y += (attractor.targetY - attractor.y) * 0.1;
+        // Smoothly interpolate attractor (Accelerated 4x from 0.1 to 0.40 for immediate touch/mouse tracking)
+        attractor.x += (attractor.targetX - attractor.x) * 0.40;
+        attractor.y += (attractor.targetY - attractor.y) * 0.40;
       } else {
-        // Return attractor back to 0
-        attractor.x += (0 - attractor.x) * 0.05;
-        attractor.y += (0 - attractor.y) * 0.05;
+        // Return attractor back to 0 (Snappier recovery)
+        attractor.x += (0 - attractor.x) * 0.20;
+        attractor.y += (0 - attractor.y) * 0.20;
       }
 
       const cosX = Math.cos(angleX);
