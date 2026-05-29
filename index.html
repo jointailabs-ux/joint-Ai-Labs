@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joint AI Labs | Premium AI & Software Development Agency</title>
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Joint AI Labs is a premium, AI-first technology and software development company. We build custom AI solutions, web applications, mobile apps, automation systems, and enterprise software that help businesses grow faster, reduce costs, and scale with confidence.">
+  <meta name="keywords" content="AI Development Agency, Custom AI Solutions, AI Automation Services, Web App Development, Mobile App Development, Software Modernization">
+  <meta name="author" content="Joint AI Labs">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Joint AI Labs | Premium AI & Software Development Agency">
+  <meta property="og:description" content="Transforming Ideas Into Intelligent Digital Solutions. Custom AI systems, automation networks, and enterprise web and mobile applications designed to scale.">
+  <meta property="og:image" content="https://jointailabs.com/og-image.jpg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <!-- Immersive Futuristic Preloader -->
+  <div id="preloader">
+    <div class="preloader-content">
+      <div class="preloader-logo-box">
+        <svg viewBox="0 0 100 100" class="preloader-logo-svg">
+          <polygon points="50,15 15,80 50,60" fill="url(#orange-grad-pre)" class="pre-poly"></polygon>
+          <polygon points="50,15 50,60 85,80" fill="url(#green-grad-pre)" class="pre-poly"></polygon>
+          <defs>
+            <linearGradient id="orange-grad-pre" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FF7A00"></stop>
+              <stop offset="100%" stop-color="#FF3D00"></stop>
+            </linearGradient>
+            <linearGradient id="green-grad-pre" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#39FF14"></stop>
+              <stop offset="100%" stop-color="#00FFB3"></stop>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div class="preloader-bar-container">
+        <div class="preloader-progress-bar" id="preloader-bar"></div>
+      </div>
+      <div class="preloader-terminal" id="preloader-terminal"></div>
+    </div>
+  </div>
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress"></div>
+
+  <!-- Futuristic Canvas Background -->
+  <canvas id="wave-canvas"></canvas>
+  <div class="glow-overlay glow-orange" id="glow-orange"></div>
+  <div class="glow-overlay glow-green" id="glow-green"></div>
+  <div class="glow-overlay glow-cyan" id="glow-cyan"></div>
+
+  <!-- Ultra-Futuristic Quantum Full-Site Wave Background -->
+  <div class="full-site-wave-field">
+    <svg viewBox="0 0 1440 800" fill="none" xmlns="http://www.w3.org/2000/svg" class="quantum-svg">
+      <defs>
+        <linearGradient id="wave-grad-orange" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#ff3d00" stop-opacity="0"/>
+          <stop offset="20%" stop-color="#ff7a00" stop-opacity="0.65"/>
+          <stop offset="50%" stop-color="#ffab40" stop-opacity="0.75"/>
+          <stop offset="80%" stop-color="#ff3d00" stop-opacity="0.6"/>
+          <stop offset="100%" stop-color="#d84315" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="wave-grad-rose" x1="0%" y1="100%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#e64a19" stop-opacity="0"/>
+          <stop offset="30%" stop-color="#ff007a" stop-opacity="0.6"/>
+          <stop offset="70%" stop-color="#ff5252" stop-opacity="0.55"/>
+          <stop offset="100%" stop-color="#ff3d00" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="wave-grad-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#ffab00" stop-opacity="0"/>
+          <stop offset="40%" stop-color="#ffd600" stop-opacity="0.7"/>
+          <stop offset="80%" stop-color="#ff6d00" stop-opacity="0.45"/>
+          <stop offset="100%" stop-color="#ffab00" stop-opacity="0"/>
+        </linearGradient>
+        <filter id="glow-blur" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="35" result="blur"/>
+          <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+        </filter>
+        <!-- Neural Spark Particle Filters -->
+        <filter id="glow-spark" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="6" result="blur"/>
+          <feMerge>
+            <feMergeNode in="blur"/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
+      </defs>
+      <!-- Ambient Fluid Backdrop Lights -->
+      <path d="M-100,280 C320,120 720,480 1120,220 C1320,70 1520,170 1620,220" stroke="url(#wave-grad-orange)" stroke-width="180" stroke-linecap="round" opacity="0.08" filter="url(#glow-blur)"/>
+      <path d="M-100,250 C370,450 670,50 1020,350 C1270,500 1470,250 1620,150" stroke="url(#wave-grad-rose)" stroke-width="150" stroke-linecap="round" opacity="0.06" filter="url(#glow-blur)"/>
+      
+      <!-- Overlapping Dynamic 3D Neon Ribbon Meshes (Thick and Volumetric) -->
+      <path class="ribbon-strand strand-1" d="M-100,280 C320,120 720,480 1120,220 C1320,70 1520,170 1620,220" stroke="url(#wave-grad-orange)" stroke-width="32" stroke-linecap="round" opacity="0.75"/>
+      <path class="ribbon-strand strand-2" d="M-100,250 C340,150 700,450 1100,250 C1300,100 1500,150 1620,180" stroke="url(#wave-grad-gold)" stroke-width="20" stroke-linecap="round" opacity="0.65"/>
+      <path class="ribbon-strand strand-3" d="M-100,310 C300,90 740,510 1140,190 C1340,40 1540,190 1620,260" stroke="url(#wave-grad-rose)" stroke-width="12" stroke-linecap="round" opacity="0.6"/>
+      <path class="ribbon-strand strand-4" d="M-100,220 C360,180 680,420 1080,280 C1280,130 1480,120 1620,140" stroke="url(#wave-grad-orange)" stroke-width="6" stroke-dasharray="14 10" stroke-linecap="round" opacity="0.55"/>
+
+      <!-- Animated Neural Sparks gliding elegantly along vector streams -->
+      <circle r="8" fill="#ff9e43" filter="url(#glow-spark)">
+        <animateMotion dur="7s" repeatCount="indefinite" path="M-100,280 C320,120 720,480 1120,220 C1320,70 1520,170 1620,220" />
+      </circle>
+      <circle r="6" fill="#39ff14" filter="url(#glow-spark)">
+        <animateMotion dur="9s" repeatCount="indefinite" path="M-100,250 C340,150 700,450 1100,250 C1300,100 1500,150 1620,180" />
+      </circle>
+      <circle r="5" fill="#00ffb3" filter="url(#glow-spark)">
+        <animateMotion dur="11s" repeatCount="indefinite" path="M-100,310 C300,90 740,510 1140,190 C1340,40 1540,190 1620,260" />
+      </circle>
+    </svg>
+  </div>
+
+  <!-- Sticky Transparent Header -->
+  <header id="main-header" class="site-header">
+    <div class="header-container">
+      <a href="#" class="logo" id="header-logo" data-target="home">
+        <div class="logo-icon">
+          <svg viewBox="0 0 100 100" class="logo-svg">
+            <polygon points="50,15 15,80 50,60" fill="url(#orange-grad)" class="logo-poly-orange"></polygon>
+            <polygon points="50,15 50,60 85,80" fill="url(#green-grad)" class="logo-poly-green"></polygon>
+            <defs>
+              <linearGradient id="orange-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FF7A00"></stop>
+                <stop offset="100%" stop-color="#FF3D00"></stop>
+              </linearGradient>
+              <linearGradient id="green-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#39FF14"></stop>
+                <stop offset="100%" stop-color="#00FFB3"></stop>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <span class="logo-text">Joint <span class="logo-text-highlight">AI Labs</span></span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active" data-target="home">Home</a></li>
+          <li><a href="#about" class="nav-link" data-target="about">About Us</a></li>
+          <li><a href="#services" class="nav-link" data-target="services">Services</a></li>
+          <li><a href="#solutions" class="nav-link" data-target="solutions">Solutions</a></li>
+          <li><a href="#portfolio" class="nav-link" data-target="portfolio">Portfolio</a></li>
+          <li><a href="#ai-solutions" class="nav-link" data-target="ai-solutions">AI Solutions</a></li>
+          <li><a href="#contact" class="nav-link" data-target="contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-cta">
+        <a href="#contact" class="btn-cta btn-glow" data-target="contact">
+          Get in Touch
+          <svg class="cta-arrow" viewBox="0 0 24 24" width="16" height="16">
+            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+          <span class="toggle-bar"></span>
+          <span class="toggle-bar"></span>
+          <span class="toggle-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page View Container (SPA Structure) -->
+  <main class="page-container" id="page-container">
+
+    <!-- ================== SECTION: HOME VIEW ================== -->
+    <div class="page-view active" id="home-view">
+      
+      <!-- HERO -->
+      <section class="hero-section section-padding">
+
+        <!-- Floating Parallax AI Info Nodes (True Glassmorphic Depth) -->
+        <div class="floating-quantum-node node-a float-anim-slow" data-speed="0.06">
+          <div class="node-icon">🧠</div>
+          <div class="node-content">
+            <span class="node-title">Cognitive Core</span>
+            <span class="node-status">Active [99.8%]</span>
+          </div>
+        </div>
+        <div class="floating-quantum-node node-b float-anim" data-speed="0.12">
+          <div class="node-icon">⚡</div>
+          <div class="node-content">
+            <span class="node-title">Automation Grid</span>
+            <span class="node-status">Compiling logs</span>
+          </div>
+        </div>
+        <div class="floating-quantum-node node-c float-anim-slow" data-speed="0.08">
+          <div class="node-icon">🛡️</div>
+          <div class="node-content">
+            <span class="node-title">Secure Mesh</span>
+            <span class="node-status">Zero-defect status</span>
+          </div>
+        </div>
+        
+        <div class="container hero-grid">
+          
+          <!-- Hero Left -->
+          <div class="hero-left">
+            <div class="hero-badge fade-up">
+              <span class="badge-dot orange"></span>
+              <span class="badge-text">Innovate</span>
+              <span class="badge-separator">•</span>
+              <span class="badge-dot green"></span>
+              <span class="badge-text">Automate</span>
+              <span class="badge-separator">•</span>
+              <span class="badge-dot cyan"></span>
+              <span class="badge-text">Scale</span>
+            </div>
+            
+            <h1 class="hero-headline fade-up">
+              Building <span class="text-gradient-orange">Intelligent Software</span> for <span class="text-gradient-green">Modern Businesses</span>
+            </h1>
+            
+            <p class="hero-subheadline fade-up">
+              Custom AI solutions, web applications, mobile applications, automation systems, and enterprise software designed to help businesses grow faster, reduce costs, and stay ahead of the competition.
+            </p>
+            
+            <div class="hero-actions fade-up">
+              <a href="#contact" class="btn-primary" data-target="contact">
+                Schedule a Consultation
+                <svg class="btn-arrow" viewBox="0 0 24 24" width="16" height="16">
+                  <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </a>
+              <a href="#portfolio" class="btn-secondary" data-target="portfolio">View Our Work</a>
+            </div>
+
+            <!-- Live Core Telemetry Bar (High Fidelity Accents) -->
+            <div class="live-status-bar fade-up">
+              <span class="status-indicator">
+                <span class="status-pulse-dot"></span>
+                SYSTEM ACTIVE
+              </span>
+              <span class="status-divider">|</span>
+              <span class="status-item">LATENCY: <span class="status-highlight">12ms</span></span>
+              <span class="status-divider">|</span>
+              <span class="status-item">CORES: <span class="status-highlight">16x QUANTUM</span></span>
+              <span class="status-divider">|</span>
+              <span class="status-item">RATIO: <span class="status-highlight">98.4x SPEED</span></span>
+            </div>
+            
+            <!-- Trust Section -->
+            <div class="hero-trust fade-up">
+              <div class="avatar-group">
+                <img src="/avatars/avatar1.jpg" alt="Client 1" class="avatar-img" onerror="this.src='https://randomuser.me/api/portraits/men/32.jpg'">
+                <img src="/avatars/avatar2.jpg" alt="Client 2" class="avatar-img" onerror="this.src='https://randomuser.me/api/portraits/women/44.jpg'">
+                <img src="/avatars/avatar3.jpg" alt="Client 3" class="avatar-img" onerror="this.src='https://randomuser.me/api/portraits/men/86.jpg'">
+              </div>
+              <div class="trust-text">
+                <span class="trust-bold">Trusted by 100+ global brands</span>
+                <span class="trust-sub">to deliver engineering excellence</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Right: Interactive 3D Canvas Attractor Globe + Glass Cards (High Fidelity Stack) -->
+          <div class="hero-right">
+            
+            <!-- Interactive 3D Holographic Core Canvas -->
+            <div class="hero-3d-container">
+              <canvas id="hero-3d-canvas"></canvas>
+            </div>
+            
+            <!-- Interactive Analytics Card (Stacked above 3D Core with Backdrop Blur) -->
+            <div class="dashboard-card glass-card glow-border-card float-anim-slow tilt-card" id="hero-dashboard-card">
+              <div class="dashboard-header">
+                <span class="dash-dot"></span>
+                <span class="dash-title" id="dash-title-metric">Users Dashboard</span>
+              </div>
+              
+              <div class="dashboard-main-metric">
+                <div class="metric-val" id="dashboard-users-count">25.6K</div>
+                <div class="metric-info">
+                  <span class="metric-label" id="dashboard-main-label">Total Users</span>
+                  <span class="metric-growth-badge" id="dashboard-main-growth">+12.5%</span>
+                </div>
+              </div>
+              
+              <div class="dashboard-chart">
+                <svg class="chart-svg" viewBox="0 0 300 100" id="morph-chart-svg">
+                  <defs>
+                    <linearGradient id="chart-glow" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" stop-color="#FF7A00" stop-opacity="0.4" id="gradient-stop-1"></stop>
+                      <stop offset="100%" stop-color="#FF7A00" stop-opacity="0" id="gradient-stop-2"></stop>
+                    </linearGradient>
+                  </defs>
+                  <path d="M0,80 Q30,60 60,75 T120,40 T180,65 T240,30 T300,15 L300,100 L0,100 Z" fill="url(#chart-glow)" id="chart-path-glow"></path>
+                  <path d="M0,80 Q30,60 60,75 T120,40 T180,65 T240,30 T300,15" fill="none" stroke="#FF7A00" stroke-width="3.5" stroke-linecap="round" class="chart-stroke-anim" id="chart-path-stroke"></path>
+                  <circle cx="240" cy="30" r="5" fill="#FF7A00" class="chart-node-pulse" id="chart-node-pulse"></circle>
+                  <circle cx="240" cy="30" r="10" fill="none" stroke="#FF7A00" stroke-width="1.5" class="chart-node-ring" id="chart-node-ring"></circle>
+                </svg>
+              </div>
+              
+              <div class="dashboard-submetrics-interactive">
+                <button class="interactive-sub-row active" data-metric="users">
+                  <span class="sub-label">Users Grid</span>
+                  <span class="sub-val positive">+12.5%</span>
+                </button>
+                <button class="interactive-sub-row" data-metric="engagement">
+                  <span class="sub-label">Engagement</span>
+                  <span class="sub-val positive">+18.2%</span>
+                </button>
+                <button class="interactive-sub-row" data-metric="conversion">
+                  <span class="sub-label">Conversion</span>
+                  <span class="sub-val positive">+8.7%</span>
+                </button>
+                <button class="interactive-sub-row" data-metric="retention">
+                  <span class="sub-label">Retention</span>
+                  <span class="sub-val positive">+14.3%</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Floating Agent Assistant Card (Interactive Chatbot Sim Stacked Above 3D Core) -->
+            <div class="agent-floating-card glass-card glow-border-card float-anim" id="hero-agent-card">
+              <div class="agent-header">
+                <div class="agent-avatar">🤖</div>
+                <div class="agent-status-box">
+                  <span class="agent-name">Optimization Agent</span>
+                  <span class="agent-active-badge"><span class="badge-pulsing-dot"></span>Active</span>
+                </div>
+              </div>
+              
+              <div class="agent-chat" id="agent-chat-box">
+                <div class="chat-bubble ai">Hi! Choose an action below and watch me compile live business workflows:</div>
+              </div>
+
+              <!-- Sleek Quick replies trigger simulation -->
+              <div class="chatbot-quick-replies">
+                <button class="reply-btn" data-reply="optimize">⚡ Optimize Ops</button>
+                <button class="reply-btn" data-reply="workflows">🧠 Chain AI</button>
+                <button class="reply-btn" data-reply="scale">🌐 Scale Systems</button>
+              </div>
+
+              <div class="agent-info">
+                <p>Dynamic action plans deployed to optimize advertising workflows, redirecting spend, content, and conversion targets.</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- WHY JOINT AI LABS -->
+      <section class="section-padding border-top-glow" style="background: rgba(255, 255, 255, 0.01);">
+        <div class="container">
+          <div class="section-header text-center">
+            <span class="section-label">THE COMPETITIVE EDGE</span>
+            <h2 class="section-title">Why Choose Joint AI Labs?</h2>
+            <p class="section-subtitle">
+              At Joint AI Labs, we combine software engineering, artificial intelligence, and business strategy to create digital solutions that deliver measurable results. Whether you're a startup, SME, enterprise, or government organization, we help transform ideas into scalable technology products.
+            </p>
+          </div>
+
+          <div class="services-grid" style="grid-template-columns: repeat(3, 1fr); margin-top: 50px;">
+            <div class="service-card glass-card hover-glow-orange">
+              <div class="service-icon-box orange">🧠</div>
+              <h3 class="service-card-title">AI-Powered Solutions</h3>
+              <p class="service-card-desc">Chaining advanced natural language architectures and cognitive workflows directly with internal core products.</p>
+            </div>
+            <div class="service-card glass-card hover-glow-green">
+              <div class="service-icon-box green">⚙️</div>
+              <h3 class="service-card-title">Custom Software</h3>
+              <p class="service-card-desc">Tailor-made software architectures cleanly compiled to address the highly specific operational goals of your business.</p>
+            </div>
+            <div class="service-card glass-card hover-glow-orange">
+              <div class="service-icon-box orange">📱</div>
+              <h3 class="service-card-title">Web & Mobile Apps</h3>
+              <p class="service-card-desc">Highly accessible cross-platform software crafted using modular components designed to run cleanly on all devices.</p>
+            </div>
+            <div class="service-card glass-card hover-glow-green">
+              <div class="service-icon-box green">⚡</div>
+              <h3 class="service-card-title">Process Automation</h3>
+              <p class="service-card-desc">Automate back-office systems and CRM syncing to cut manual overhead and secure zero-defect operations.</p>
+            </div>
+            <div class="service-card glass-card hover-glow-orange">
+              <div class="service-icon-box orange">☁️</div>
+              <h3 class="service-card-title">Cloud Deployment</h3>
+              <p class="service-card-desc">Fully orchestrated secure microservices scaling automatically over secure global cloud networks (AWS/GCP).</p>
+            </div>
+            <div class="service-card glass-card hover-glow-green">
+              <div class="service-icon-box green">🤝</div>
+              <h3 class="service-card-title">Dedicated Support</h3>
+              <p class="service-card-desc">Continuous monitoring, routine performance calibration, and rapid architect-level technical support.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- OUR SERVICES SUMMARY -->
+      <section class="services-overview-section section-padding border-top-glow">
+        <div class="container">
+          <div class="section-header text-center">
+            <span class="section-label">WHAT WE BUILD</span>
+            <h2 class="section-title">Transforming Ideas Into<br>Intelligent Digital Solutions</h2>
+            <p class="section-subtitle">From AI agents and automation systems to enterprise web and mobile applications, Joint AI Labs helps businesses innovate, automate, and scale with confidence.</p>
+          </div>
+
+          <div class="capabilities-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-top: 50px;">
+            
+            <!-- AI Solutions -->
+            <div class="detailed-capability-box glass-card hover-glow-green" style="padding: 30px;">
+              <h4 style="font-size: 1.5rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                <span style="color: var(--green-glow)">🧬</span> AI Solutions
+              </h4>
+              <p style="color: var(--text-secondary); margin-bottom: 20px;">Transform business operations using intelligent AI systems.</p>
+              <ul class="checklist-bullet-list">
+                <li>AI Chatbots & Virtual Assistants</li>
+                <li>AI Agents & Workflow Automation</li>
+                <li>Document Processing & OCR</li>
+                <li>Predictive Analytics</li>
+                <li>Generative AI Applications</li>
+                <li>AI Integration with Existing Systems</li>
+              </ul>
+            </div>
+
+            <!-- Web Application Development -->
+            <div class="detailed-capability-box glass-card hover-glow-orange" style="padding: 30px;">
+              <h4 style="font-size: 1.5rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                <span style="color: var(--orange-glow)">💻</span> Web Application Development
+              </h4>
+              <p style="color: var(--text-secondary); margin-bottom: 20px;">Modern, scalable web applications built for performance.</p>
+              <ul class="checklist-bullet-list">
+                <li>SaaS Platforms</li>
+                <li>Business Portals</li>
+                <li>ERP & CRM Systems</li>
+                <li>Marketplace Platforms</li>
+                <li>Enterprise Applications</li>
+                <li>Dashboard & Analytics Solutions</li>
+              </ul>
+            </div>
+
+            <!-- Mobile App Development -->
+            <div class="detailed-capability-box glass-card hover-glow-orange" style="padding: 30px;">
+              <h4 style="font-size: 1.5rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                <span style="color: var(--orange-glow)">📱</span> Mobile App Development
+              </h4>
+              <p style="color: var(--text-secondary); margin-bottom: 20px;">Native and cross-platform applications.</p>
+              <ul class="checklist-bullet-list">
+                <li>Android Apps</li>
+                <li>iOS Apps</li>
+                <li>Flutter Applications</li>
+                <li>Business Apps</li>
+                <li>E-commerce Apps</li>
+                <li>On-demand Service Apps</li>
+              </ul>
+            </div>
+
+            <!-- Custom Software Development -->
+            <div class="detailed-capability-box glass-card hover-glow-green" style="padding: 30px;">
+              <h4 style="font-size: 1.5rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                <span style="color: var(--green-glow)">⚙️</span> Custom Software Development
+              </h4>
+              <p style="color: var(--text-secondary); margin-bottom: 20px;">Tailor-made software designed around your business processes.</p>
+              <ul class="checklist-bullet-list">
+                <li>Internal Business Systems</li>
+                <li>Inventory Management</li>
+                <li>HR & Payroll Systems</li>
+                <li>Manufacturing Solutions</li>
+                <li>Healthcare Platforms</li>
+                <li>Educational Technology</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- INDUSTRIES WE SERVE -->
+      <section class="section-padding border-top-glow" style="background: rgba(0, 0, 0, 0.15);">
+        <div class="container">
+          <div class="section-header text-center">
+            <span class="section-label">MARKET VERTICALS</span>
+            <h2 class="section-title">Industries We Serve</h2>
+            <p class="section-subtitle">We develop technology solutions for diverse sectors worldwide.</p>
+          </div>
+
+          <div class="industries-flex-grid" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; max-width: 900px; margin: 40px auto 0 auto;">
+            <span class="industry-badge glass">🏭 Manufacturing</span>
+            <span class="industry-badge glass">🏥 Healthcare</span>
+            <span class="industry-badge glass">🎓 Education</span>
+            <span class="industry-badge glass">🛒 Retail & E-commerce</span>
+            <span class="industry-badge glass">📦 Logistics</span>
+            <span class="industry-badge glass">🏢 Real Estate</span>
+            <span class="industry-badge glass">💳 Finance</span>
+            <span class="industry-badge glass">🏨 Hospitality</span>
+            <span class="industry-badge glass">🏛️ Government Organizations</span>
+            <span class="industry-badge glass">🚀 Startups</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- DEVELOPMENT PROCESS -->
+      <section class="section-padding border-top-glow">
+        <div class="container">
+          <div class="section-header text-center">
+            <span class="section-label">THE WORKFLOW</span>
+            <h2 class="section-title">Our Development Process</h2>
+            <p class="section-subtitle">Highly structured, transparent execution from assessment to continuous scaling.</p>
+          </div>
+
+          <div class="process-flow-container" style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; margin-top: 50px;">
+            <div class="process-node-card glass-card text-center" style="padding: 24px;">
+              <div class="node-num orange">01</div>
+              <h4>Discover</h4>
+              <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 8px;">We understand your business challenges and objectives.</p>
+            </div>
+            <div class="process-node-card glass-card text-center" style="padding: 24px;">
+              <div class="node-num green">02</div>
+              <h4>Design</h4>
+              <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 8px;">Our team designs intuitive user experiences and technical architecture.</p>
+            </div>
+            <div class="process-node-card glass-card text-center" style="padding: 24px;">
+              <div class="node-num orange">03</div>
+              <h4>Develop</h4>
+              <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 8px;">Agile development with transparent communication.</p>
+            </div>
+            <div class="process-node-card glass-card text-center" style="padding: 24px;">
+              <div class="node-num green">04</div>
+              <h4>Deploy</h4>
+              <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 8px;">Secure deployment with cloud infrastructure.</p>
+            </div>
+            <div class="process-node-card glass-card text-center" style="padding: 24px;">
+              <div class="node-num orange">05</div>
+              <h4>Support</h4>
+              <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 8px;">Continuous monitoring, maintenance, and improvements.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CLIENT SUCCESS -->
+      <section class="section-padding border-top-glow" style="background: rgba(255,122,0,0.015);">
+        <div class="container text-center" style="max-width: 850px;">
+          <span class="section-label">REAL WORLD IMPACT</span>
+          <h2 class="section-title">Helping Businesses Scale Through Technology</h2>
+          <p class="about-desc" style="font-size: 1.25rem; line-height: 1.6; margin-top: 20px; color: var(--text-main);">
+            From startups launching their first product to enterprises modernizing operations, our solutions are built to create real business impact.
+          </p>
+        </div>
+      </section>
+
+      <!-- HOME CTA SECTION -->
+      <section class="section-padding border-top-glow">
+        <div class="container text-center" style="max-width: 800px;">
+          <h2 class="section-title" style="font-size: 3rem;">Ready to Build Something Exceptional?</h2>
+          <p class="section-subtitle" style="margin-top: 12px; margin-bottom: 30px;">
+            Let's discuss your project and discover how AI and software can transform your business.
+          </p>
+          <a href="#contact" class="btn-primary" data-target="contact" style="box-shadow: 0 10px 30px rgba(255,122,0,0.2)">
+            Book Free Consultation
+            <svg class="btn-arrow" viewBox="0 0 24 24" width="16" height="16">
+              <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </a>
+        </div>
+      </section>
+
+    </div>
+
+
+    <!-- ================== SECTION: ABOUT VIEW ================== -->
+    <div class="page-view" id="about-view">
+      <section class="section-padding">
+        <div class="container">
+          <div class="section-header text-center">
+            <span class="section-label">OUR MISSION</span>
+            <h1 class="section-title">About Joint AI Labs</h1>
+            <p class="section-subtitle" style="font-size: 1.25rem; color: var(--text-main); font-weight: 500;">
+              Use technology and artificial intelligence to solve real-world business problems.
+            </p>
+          </div>
+
+          <div style="max-width: 800px; margin: 40px auto 0 auto; text-align: justify; line-height: 1.8; font-size: 1.05rem;" class="glass-card" style="padding: 40px;">
+            <p style="margin-bottom: 20px;">
+              Joint AI Labs is a technology and AI development company focused on creating innovative software solutions for businesses worldwide.
+            </p>
+            <p>
+              We help organizations streamline operations, improve productivity, automate repetitive tasks, and unlock new growth opportunities through custom-built digital solutions.
+            </p>
+          </div>
+
+          <!-- VISION -->
+          <div class="cognitive-core-section section-padding border-top-glow" style="padding: 60px 0;">
+            <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; align-items: center;">
+              <div>
+                <span class="section-label">THE FUTURE</span>
+                <h3 style="font-size: 2.25rem; font-weight: 700;">Our Vision</h3>
+              </div>
+              <div>
+                <p style="font-size: 1.2rem; line-height: 1.7; color: var(--text-main); border-left: 3px solid var(--orange-glow); padding-left: 20px;">
+                  To become a global innovation partner helping businesses leverage artificial intelligence and software to achieve sustainable growth.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- VALUES -->
+          <div class="team-section border-top-glow">
+            <h3 class="team-header-title text-center" style="margin-bottom: 40px;">Our Values</h3>
+            <div class="services-grid" style="grid-template-columns: repeat(4, 1fr);">
+              <div class="service-card glass-card text-center" style="padding: 24px;">
+                <div style="font-size: 2.5rem; margin-bottom: 12px;">💡</div>
+                <h4>Innovation</h4>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 8px;">We embrace emerging technologies to create future-ready solutions.</p>
+              </div>
+              <div class="service-card glass-card text-center" style="padding: 24px;">
+                <div style="font-size: 2.5rem; margin-bottom: 12px;">🏆</div>
+                <h4>Excellence</h4>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 8px;">We focus on quality, scalability, and performance.</p>
+              </div>
+              <div class="service-card glass-card text-center" style="padding: 24px;">
+                <div style="font-size: 2.5rem; margin-bottom: 12px;">🤝</div>
+                <h4>Transparency</h4>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 8px;">Clear communication throughout every project.</p>
+              </div>
+              <div class="service-card glass-card text-center" style="padding: 24px;">
+                <div style="font-size: 2.5rem; margin-bottom: 12px;">📈</div>
+                <h4>Customer Success</h4>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 8px;">Your growth is our success.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <!-- ================== SECTION: SERVICES VIEW ================== -->
+    <div class="page-view" id="services-view">
+      <section class="section-padding">
+        <div class="container">
+          <div class="section-header text-center">
+            <span class="section-label">OUR CORE CAPABILITIES</span>
+            <h1 class="section-title">Our Services</h1>
+            <p class="section-subtitle">We deploy custom-tailored technical infrastructures aligned with modern industry benchmarks.</p>
+          </div>
+
+          <div class="detailed-services-grid" style="margin-top: 50px;">
+            
+            <!-- AI Solutions -->
+            <div class="detail-service-card glass-card hover-glow-green">
+              <div class="card-icon-header green">
+                <span>🤖</span>
+                <h3>Artificial Intelligence Solutions</h3>
+              </div>
+              <p class="detail-card-desc">Build intelligent systems that automate, analyze, and enhance decision-making.</p>
+              <div class="tech-stack-row">
+                <span class="tech-tag">AI Chatbots</span>
+                <span class="tech-tag">AI Agents</span>
+                <span class="tech-tag">Knowledge Bases</span>
+                <span class="tech-tag">RAG Apps</span>
+                <span class="tech-tag">NLP</span>
+                <span class="tech-tag">Computer Vision</span>
+                <span class="tech-tag">Consulting</span>
+              </div>
+            </div>
+
+            <!-- Web Development -->
+            <div class="detail-service-card glass-card hover-glow-orange">
+              <div class="card-icon-header orange">
+                <span>💻</span>
+                <h3>Web Development</h3>
+              </div>
+              <p class="detail-card-desc">Professional web applications designed for scalability and sub-second loading speeds.</p>
+              <div class="tech-stack-row">
+                <span class="tech-tag">SaaS Products</span>
+                <span class="tech-tag">Enterprise Apps</span>
+                <span class="tech-tag">Management Hubs</span>
+                <span class="tech-tag">Customer Portals</span>
+                <span class="tech-tag">E-commerce</span>
+              </div>
+            </div>
+
+            <!-- Mobile App Development -->
+            <div class="detail-service-card glass-card hover-glow-green">
+              <div class="card-icon-header green">
+                <span>📱</span>
+                <h3>Mobile App Development</h3>
+              </div>
+              <p class="detail-card-desc">Create engaging, fluid, and robust mobile experiences on physical handheld platforms.</p>
+              <div class="tech-stack-row">
+                <span class="tech-tag">Android Dev</span>
+                <span class="tech-tag">iOS Dev</span>
+                <span class="tech-tag">Cross-Platform</span>
+                <span class="tech-tag">Support</span>
+              </div>
+            </div>
+
+            <!-- Software Modernization -->
+            <div class="detail-service-card glass-card hover-glow-orange">
+              <div class="card-icon-header orange">
+                <span>⚡</span>
+                <h3>Software Modernization</h3>
+              </div>
+              <p class="detail-card-desc">Upgrade legacy architectures, optimize bottlenecks, and improve operational efficiency.</p>
+              <div class="tech-stack-row">
+                <span class="tech-tag">System Migration</span>
+                <span class="tech-tag">Cloud Transformation</span>
+                <span class="tech-tag">API Dev</span>
+                <span class="tech-tag">DB Tuning</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- 3D Platform Section -->
+          <div class="cognitive-core-section section-padding border-top-glow" style="padding: 80px 0 40px 0;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+              <div class="cognitive-3d-wrapper">
+                <div class="core-card-3d glass-card" style="padding: 24px; position: relative;">
+                  <canvas id="services-3d-canvas" style="width: 100%; height: 320px; display: block; background: transparent;"></canvas>
+                  <div class="label-3d-overlay" style="position: absolute; bottom: 20px; left: 24px; font-family: var(--font-badge); font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; color: var(--green-glow); text-transform: uppercase;">
+                    SYSTEM: 3D_NEURAL_COGNITIVE_GRID
+                  </div>
+                </div>
+              </div>
+              <div class="cognitive-details">
+                <span class="section-label">INTERACTIVE PLATFORM</span>
+                <h3 style="font-size: 2.25rem; font-weight: 700; margin-bottom: 20px; line-height: 1.2;">Interactive Physics Visualization Core</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 28px; line-height: 1.6;">
+                  We build scalable digital platforms backed by immersive custom physics models. Move your cursor over our neural matrix to see the network nodes react and re-link in real time.
+                </p>
+                <div style="display: flex; flex-direction: column; gap: 16px;">
+                  <div style="display: flex; align-items: center; gap: 12px; font-weight: 500;">
+                    <span style="color: var(--orange-glow); font-size: 1.2rem;">⚡</span>
+                    <span>Zero-Latency WebGL Geometry projections</span>
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 12px; font-weight: 500;">
+                    <span style="color: var(--green-glow); font-size: 1.2rem;">🧬</span>
+                    <span>Interactive spring-physics attractor networks</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <!-- ================== SECTION: SOLUTIONS VIEW ================== -->
+    <div class="page-view" id="solutions-view">
+      <section class="section-padding">
+        <div class="container">
+          <div class="section-header text-center">
+            <span class="section-label">ENTERPRISE BLUEPRINTS</span>
+            <h1 class="section-title">Business Solutions</h1>
+            <p class="section-subtitle">Engineered blueprints configured to automate growth and modernize legacy business workflows.</p>
+          </div>
+
+          <div class="services-grid" style="grid-template-columns: repeat(3, 1fr); margin-top: 50px;">
+            <div class="service-card glass-card hover-glow-orange">
+              <div style="font-size: 2.25rem; margin-bottom: 12px;">💬</div>
+              <h3 class="service-card-title">AI-Powered Customer Support</h3>
+              <p class="service-card-desc">24/7 AI assistants that answer customer queries instantly.</p>
+            </div>
+            <div class="service-card glass-card hover-glow-green">
+              <div style="font-size: 2.25rem; margin-bottom: 12px;">🤖</div>
+              <h3 class="service-card-title">Business Process Automation</h3>
+              <p class="service-card-desc">Automate repetitive workflows and reduce manual effort.</p>
+            </div>
+            <div class="service-card glass-card hover-glow-orange">
+              <div style="font-size: 2.25rem; margin-bottom: 12px;">📊</div>
+              <h3 class="service-card-title">Digital Transformation</h3>
+              <p class="service-card-desc">Replace spreadsheets and outdated systems with modern software.</p>
+            </div>
+            <div class="service-card glass-card hover-glow-green">
+              <div style="font-size: 2.25rem; margin-bottom: 12px;">💡</div>
+              <h3 class="service-card-title">Data Intelligence</h3>
+              <p class="service-card-desc">Convert business data into actionable insights.</p>
+            </div>
+            <div class="service-card glass-card hover-glow-orange" style="grid-column: span 2;">
+              <div style="font-size: 2.25rem; margin-bottom: 12px;">🛡️</div>
+              <h3 class="service-card-title">Enterprise Solutions</h3>
+              <p class="service-card-desc">Custom platforms built for large-scale operations.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ================== SECTION: PORTFOLIO VIEW ================== -->
+    <div class="page-view" id="portfolio-view">
+      <section class="section-padding">
+        <div class="container">
+          <div class="section-header text-center">
+            <span class="section-label">SELECTED WORKS</span>
+            <h1 class="section-title">Our Work</h1>
+            <p class="section-subtitle">Showcase selected projects demonstrating our capabilities across AI, web, and mobile development.</p>
+          </div>
+
+          <div class="portfolio-grid" style="margin-top: 50px;">
+            
+            <!-- Project 1 -->
+            <div class="project-card glass-card">
+              <div class="project-img-box">
+                <div class="project-mockup-bg gradient-orange-glow">
+                  <div class="inner-mockup-tag">AUTOSUPPORT AI</div>
+                </div>
+              </div>
+              <div class="project-details" style="padding: 24px;">
+                <div class="project-cat" style="color: var(--orange-glow); font-weight: 700; font-size: 0.75rem;">RETAIL</div>
+                <h4 class="project-title" style="font-size: 1.5rem; margin: 8px 0;">AutoSupport AI</h4>
+                
+                <div class="portfolio-details-block" style="margin-top: 14px; font-size: 0.9rem;">
+                  <p style="margin-bottom: 8px;"><strong style="color: var(--text-main);">Challenge:</strong> Client needed automated customer support.</p>
+                  <p style="margin-bottom: 8px;"><strong style="color: var(--text-main);">Solution:</strong> Developed AI-powered chatbot integrated with CRM.</p>
+                  <p><strong style="color: var(--green-glow);">Result:</strong> Reduced response time by 80%.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card glass-card">
+              <div class="project-img-box">
+                <div class="project-mockup-bg gradient-green-glow">
+                  <div class="inner-mockup-tag">MATRIX</div>
+                </div>
+              </div>
+              <div class="project-details" style="padding: 24px;">
+                <div class="project-cat" style="color: var(--green-glow); font-weight: 700; font-size: 0.75rem;">LOGISTICS & WAREHOUSING</div>
+                <h4 class="project-title" style="font-size: 1.5rem; margin: 8px 0;">Warehouse Matrix</h4>
+                
+                <div class="portfolio-details-block" style="margin-top: 14px; font-size: 0.9rem;">
+                  <p style="margin-bottom: 8px;"><strong style="color: var(--text-main);">Challenge:</strong> Inventory tracking was manual, laggy, and prone to auditing mistakes.</p>
+                  <p style="margin-bottom: 8px;"><strong style="color: var(--text-main);">Solution:</strong> Deployed customized inventory software with physical scanner integrations.</p>
+                  <p><strong style="color: var(--green-glow);">Result:</strong> Cut stock audit times from 3 days to 4 hours.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card glass-card">
+              <div class="project-img-box">
+                <div class="project-mockup-bg gradient-cyan-glow">
+                  <div class="inner-mockup-tag">BILLING CORE</div>
+                </div>
+              </div>
+              <div class="project-details" style="padding: 24px;">
+                <div class="project-cat" style="color: var(--cyan-glow); font-weight: 700; font-size: 0.75rem;">FINANCIAL TECHNOLOGY</div>
+                <h4 class="project-title" style="font-size: 1.5rem; margin: 8px 0;">SaaS Billing Core</h4>
+                
+                <div class="portfolio-details-block" style="margin-top: 14px; font-size: 0.9rem;">
+                  <p style="margin-bottom: 8px;"><strong style="color: var(--text-main);">Challenge:</strong> Complex multi-tenant subscription tracking and tax compliance loops.</p>
+                  <p style="margin-bottom: 8px;"><strong style="color: var(--text-main);">Solution:</strong> Engineered secure, API-first recurring billing integration.</p>
+                  <p><strong style="color: var(--green-glow);">Result:</strong> Zero transaction failures and fully automated monthly reporting.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ================== SECTION: AI SOLUTIONS VIEW ================== -->
+    <div class="page-view" id="ai-solutions-view">
+      <section class="section-padding">
+        <div class="container">
+          <div class="section-header text-center">
+            <span class="section-label">COGNITIVE ENGINES</span>
+            <h1 class="section-title">AI Solutions That Deliver Results</h1>
+            <p class="section-subtitle">We design and deploy practical, high-throughput AI solutions that create measurable business value.</p>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; margin-top: 50px;">
+            
+            <!-- What We Build -->
+            <div class="glass-card" style="padding: 30px;">
+              <h3 style="font-size: 1.75rem; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                <span style="color: var(--orange-glow)">📦</span> What We Build
+              </h3>
+              <ul class="checklist-bullet-list" style="columns: 2; gap: 20px;">
+                <li>AI Chatbots</li>
+                <li>AI Customer Support Systems</li>
+                <li>AI Voice Agents</li>
+                <li>AI Sales Assistants</li>
+                <li>AI Document Processing</li>
+                <li>AI Workflow Automation</li>
+                <li>AI Search Systems</li>
+                <li>AI Analytics</li>
+              </ul>
+            </div>
+
+            <!-- Benefits -->
+            <div class="glass-card" style="padding: 30px; border-color: rgba(57, 255, 20, 0.25);">
+              <h3 style="font-size: 1.75rem; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                <span style="color: var(--green-glow)">📈</span> Benefits
+              </h3>
+              <ul class="checklist-bullet-list" style="display: flex; flex-direction: column; gap: 12px;">
+                <li>Lower operational costs</li>
+                <li>Faster customer support</li>
+                <li>Increased productivity</li>
+                <li>Better decision-making</li>
+                <li>Improved customer experience</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ================== SECTION: CONTACT VIEW ================== -->
+    <div class="page-view" id="contact-view">
+      <section class="section-padding">
+        <div class="container contact-grid">
+          
+          <!-- Contact Left -->
+          <div class="contact-info-panel">
+            <span class="section-label">CONTACT US</span>
+            <h1 class="section-title text-left">Let’s Build the Future Together</h1>
+            <p class="contact-sub-desc">Whether you're launching a startup, scaling a business, or exploring AI opportunities, we're here to help.</p>
+            
+            <div class="contact-meta-items">
+              <div class="meta-item">
+                <span class="meta-icon green">✉️</span>
+                <div class="meta-details">
+                  <span class="meta-label">Email Us</span>
+                  <a href="mailto:hello@jointailabs.com" class="meta-val">hello@jointailabs.com</a>
+                </div>
+              </div>
+
+              <div class="meta-item">
+                <span class="meta-icon orange">📞</span>
+                <div class="meta-details">
+                  <span class="meta-label">WhatsApp Helpline</span>
+                  <a href="tel:+18005550199" class="meta-val">+1 (800) 555-0199</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Consultation Card -->
+            <div style="margin-top: 40px; padding: 24px;" class="glass-card hover-glow-green">
+              <h4 style="font-size: 1.25rem; margin-bottom: 8px;">Schedule a Free Strategy Session</h4>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;">
+                Discuss your requirements with our experts and receive a tailored roadmap for your project.
+              </p>
+            </div>
+          </div>
+
+          <!-- Contact Right Form -->
+          <div class="contact-form-panel">
+            <form class="contact-form glass-card" id="lead-contact-form">
+              <h3 class="form-panel-title">Initiate Strategy Request</h3>
+              
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="form-name">Name <span class="req">*</span></label>
+                  <input type="text" id="form-name" placeholder="John Doe" required>
+                </div>
+                <div class="form-group">
+                  <label for="form-company">Company</label>
+                  <input type="text" id="form-company" placeholder="Acme Corp">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="form-email">Email <span class="req">*</span></label>
+                  <input type="email" id="form-email" placeholder="john@company.com" required>
+                </div>
+                <div class="form-group">
+                  <label for="form-phone">Phone Number</label>
+                  <input type="tel" id="form-phone" placeholder="+1 (555) 000-0000">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="form-type">Project Type</label>
+                  <select id="form-type" class="input-modern" style="height: 46px; background-color: var(--bg-dark); color: var(--text-white); border: 1px solid var(--glass-border);">
+                    <option value="AI Solutions">AI Solutions</option>
+                    <option value="Web Development">Web Development</option>
+                    <option value="Mobile Apps">Mobile Apps</option>
+                    <option value="Custom Software">Custom Software</option>
+                    <option value="Consulting">Consulting</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="form-budget">Budget Range</label>
+                  <select id="form-budget" class="input-modern" style="height: 46px; background-color: var(--bg-dark); color: var(--text-white); border: 1px solid var(--glass-border);">
+                    <option value="&lt; $10k">&lt; $10k</option>
+                    <option value="$10k - $25k">$10k - $25k</option>
+                    <option value="$25k - $50k">$25k - $50k</option>
+                    <option value="$50k - $100k">$50k - $100k</option>
+                    <option value="$100k+">$100k+</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="form-desc">Message <span class="req">*</span></label>
+                <textarea id="form-desc" rows="4" placeholder="Tell us about the digital platform or AI systems you're building..." required></textarea>
+              </div>
+
+              <!-- Submit Response Indicators -->
+              <div class="form-status-msg success" id="form-success-msg">
+                <svg viewBox="0 0 24 24" width="16" height="16" class="status-svg"><polyline points="20 6 9 17 4 12" stroke="currentColor" stroke-width="3" fill="none"></polyline></svg>
+                Your strategy session request has been secured. Our lead architect will email you in 2 hours!
+              </div>
+
+              <button type="submit" class="btn-submit btn-glow" id="form-submit-btn">
+                <span>Book Strategy Session</span>
+                <svg class="submit-arrow" viewBox="0 0 24 24" width="18" height="18">
+                  <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <!-- IMMERSIVE FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-divider-glow"></div>
+    <div class="container footer-grid">
+      
+      <!-- Footer Brand Column -->
+      <div class="footer-col-brand">
+        <a href="#" class="logo footer-logo" data-target="home">
+          <div class="logo-icon">
+            <svg viewBox="0 0 100 100" class="logo-svg">
+              <polygon points="50,15 15,80 50,60" fill="url(#orange-grad)"></polygon>
+              <polygon points="50,15 50,60 85,80" fill="url(#green-grad)"></polygon>
+            </svg>
+          </div>
+          <span class="logo-text">Joint <span class="logo-text-highlight">AI Labs</span></span>
+        </a>
+        <p class="footer-brand-desc">Building AI-powered software solutions for businesses worldwide.</p>
+        <p class="copyright-text">&copy; 2026 Joint AI Labs Inc. All rights reserved.</p>
+      </div>
+
+      <!-- Quick Links Column -->
+      <div class="footer-col">
+        <h5 class="footer-col-title">Quick Links</h5>
+        <ul class="footer-links">
+          <li><a href="#home" data-target="home">Home</a></li>
+          <li><a href="#about" data-target="about">About</a></li>
+          <li><a href="#services" data-target="services">Services</a></li>
+          <li><a href="#solutions" data-target="solutions">Solutions</a></li>
+          <li><a href="#portfolio" data-target="portfolio">Portfolio</a></li>
+          <li><a href="#contact" data-target="contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Services Column -->
+      <div class="footer-col">
+        <h5 class="footer-col-title">Services</h5>
+        <ul class="footer-links">
+          <li><a href="#services" data-target="services">AI Solutions</a></li>
+          <li><a href="#services" data-target="services">Web Development</a></li>
+          <li><a href="#services" data-target="services">Mobile Apps</a></li>
+          <li><a href="#services" data-target="services">Custom Software</a></li>
+          <li><a href="#services" data-target="services">Consulting</a></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter Column -->
+      <div class="footer-col-newsletter">
+        <h5 class="footer-col-title">Newsletter</h5>
+        <p class="newsletter-desc">Deep technical architecture breakdowns straight to your inbox.</p>
+        <form class="footer-newsletter-form" id="newsletter-form">
+          <input type="email" placeholder="enter email address" required aria-label="Email address">
+          <button type="submit" class="newsletter-submit-btn" aria-label="Subscribe">
+            <svg viewBox="0 0 24 24" width="16" height="16">
+              <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" fill="none"></path>
+            </svg>
+          </button>
+        </form>
+        <div id="newsletter-success" class="newsletter-success-msg">Subscribed successfully!</div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Script tags -->
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
