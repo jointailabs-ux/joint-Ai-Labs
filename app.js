@@ -100,9 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     window.addEventListener('touchend', () => {
-      // Revert attractor back to center when finger is lifted to prevent freeze
-      mouse.targetX = width / 2;
-      mouse.targetY = height / 2;
+      // Let the attractor stay at the last touched position for an organic glide feel
     });
 
     // Swarm Configurations
@@ -148,9 +146,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const attractionDist = isMobile ? 180 : 280; // Limit influence range on mobile
 
         if (dist < attractionDist) {
-          // Attract particles, creating custom swirling orbital streams
-          this.vx += (dx / dist) * (attractionDist - dist) * this.magnetFactor * 0.15;
-          this.vy += (dy / dist) * (attractionDist - dist) * this.magnetFactor * 0.15;
+          // Attract particles, creating custom swirling orbital streams (Increased 3x for dramatic visual vortex!)
+          this.vx += (dx / dist) * (attractionDist - dist) * this.magnetFactor * 0.45;
+          this.vy += (dy / dist) * (attractionDist - dist) * this.magnetFactor * 0.45;
           
           this.size = this.baseSize * (1 + (attractionDist - dist) / 100);
           this.alpha = Math.min(0.95, this.baseAlpha * 1.8);
@@ -255,9 +253,9 @@ document.addEventListener('DOMContentLoaded', () => {
       ctx.fillStyle = 'rgba(2, 4, 10, 0.28)';
       ctx.fillRect(0, 0, width, height);
 
-      // Smooth mouse/touch coordinates interpolation
-      mouse.x += (mouse.targetX - mouse.x) * 0.08;
-      mouse.y += (mouse.targetY - mouse.y) * 0.08;
+      // Smooth mouse/touch coordinates interpolation (Accelerated 3x to feel highly responsive & snappy)
+      mouse.x += (mouse.targetX - mouse.x) * 0.24;
+      mouse.y += (mouse.targetY - mouse.y) * 0.24;
 
       // Draw background ambient connection threads (Only on Desktop to save mobile CPU)
       if (!isMobile) {
