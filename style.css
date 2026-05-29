@@ -2280,9 +2280,82 @@ textarea {
   }
 
   .footer-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 40px;
   }
+
+  /* Bottom Nav Display & Toggle Hiding inside Media Query */
+  .mobile-bottom-nav {
+    display: flex !important;
+  }
+
+  .mobile-toggle {
+    display: none !important;
+  }
+
+  .header-cta {
+    display: none !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   17. MOBILE BOTTOM NAVIGATION SYSTEM (Global Definitions)
+   -------------------------------------------------------------------------- */
+.mobile-bottom-nav {
+  display: none;
+  position: fixed;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 32px);
+  max-width: 440px;
+  height: 64px;
+  background: rgba(11, 17, 32, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 32px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 999;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255,255,255,0.05);
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 12px;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+}
+
+.bottom-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--text-secondary);
+  gap: 4px;
+  width: 60px;
+  height: 100%;
+  transition: var(--transition-fast);
+}
+
+.bottom-nav-icon {
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.bottom-nav-label {
+  font-family: var(--font-badge);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  transition: opacity 0.2s ease;
+}
+
+.bottom-nav-item:hover, .bottom-nav-item.active {
+  color: var(--orange-glow) !important;
+}
+
+.bottom-nav-item.active .bottom-nav-icon {
+  transform: scale(1.15) translateY(-2px);
+  filter: drop-shadow(0 0 8px rgba(255, 122, 0, 0.5));
 }
 
 @media (max-width: 768px) {
@@ -2492,5 +2565,18 @@ textarea {
   .footer-grid {
     grid-template-columns: 1fr !important;
     gap: 30px !important;
+  }
+
+  /* Bottom Nav Display & Toggle Hiding inside Media Query */
+  .mobile-bottom-nav {
+    display: flex !important;
+  }
+
+  .mobile-toggle {
+    display: none !important;
+  }
+
+  .header-cta {
+    display: none !important;
   }
 }
